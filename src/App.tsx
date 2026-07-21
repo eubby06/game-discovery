@@ -1,5 +1,6 @@
 import './App.css'
 import GameGrid from './components/GameGrid'
+import GenresList from './components/GenresList'
 
 function App() {
 
@@ -13,11 +14,11 @@ function App() {
         <div className="flex flex-1 overflow-hidden">
           <aside className="p-2 bg-gray-800">
             <nav className="space-y-1">
-              <a>Homsdfsdfe</a>
+              <GenresList />
             </nav>
           </aside>
 
-          <main className="p-6 bg-gray-50 flex">
+          <main className="p-6 flex">
             <GameGrid />
           </main>
         </div>

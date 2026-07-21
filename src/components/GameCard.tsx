@@ -14,7 +14,7 @@ const GameCard = ({ game }: Props) => {
                 
                 <div className="p-6 flex flex-col flex-grow justify-between">
                 <div>
-                    <span className="inline-block px-3 py-1 text-xs font-semibold text-teal-800 bg-teal-50 rounded-full mb-3">{game.rating}</span>
+                    <span className="inline-block px-3 py-1 text-xs font-semibold text-teal-800 bg-teal-50 rounded-full mb-3">Rating: {game.rating}</span>
                     <h2 className="text-xl font-bold text-gray-900 leading-snug">{game.name}</h2>
                     <p className="mt-2 text-gray-600 text-sm leading-relaxed">{game.description}</p>
                 </div>
