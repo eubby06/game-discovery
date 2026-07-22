@@ -1,5 +1,6 @@
 import React from 'react'
 import type { Game } from './GameGrid';
+import PlatformsList from './PlatformsList';
 
 interface Props {
     game: Game;
@@ -16,7 +17,7 @@ const GameCard = ({ game }: Props) => {
                 <div>
                     <span className="inline-block px-3 py-1 text-xs font-semibold text-teal-800 bg-teal-50 rounded-full mb-3">Rating: {game.rating}</span>
                     <h2 className="text-xl font-bold text-gray-900 leading-snug">{game.name}</h2>
-                    <p className="mt-2 text-gray-600 text-sm leading-relaxed">{game.description}</p>
+                    <PlatformsList platforms={game.platforms} />
                 </div>
                 <div className="mt-6">
                     <button className="w-full py-2.5 px-4 bg-teal-600 hover:bg-teal-700 text-white font-medium text-sm rounded-lg shadow-md transition-colors duration-200">Read More</button>

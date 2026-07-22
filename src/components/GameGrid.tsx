@@ -3,6 +3,7 @@ import ApiClient from '../services/api-client'
 import GameCard from './GameCard';
 import { useLocation } from 'react-router-dom';
 import GameCardSkeleton from './GameCardSkeleton';
+import type { Platform } from './PlatformsList';
 
 export interface Game {
     id: number;
@@ -10,6 +11,7 @@ export interface Game {
     background_image: string;
     rating: number;
     description: string;
+    platforms: { platform: Platform }[];
 }
 
 export interface FetchGamesResponse {
