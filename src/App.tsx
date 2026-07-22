@@ -1,5 +1,5 @@
 import './App.css'
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import ToggleSwitch from './components/ToggleSwitch';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="flex flex-col">
         <header className="bg-blue-600 text-white p-4 h-16 flex items-center">
-          <span className="font-semibold">Game Discovery</span>
+          <Link to="/games">Game Discovery</Link>
           <div className="ml-auto">
             <ToggleSwitch />
           </div>
