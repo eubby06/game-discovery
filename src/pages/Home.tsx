@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
+
 const Home = () => {
   return (
-    <div>WELCOME TO GAME DISCOVERY PAGE</div>
+    <Link to="/games">Go to Games</Link>
   )
 }
 
