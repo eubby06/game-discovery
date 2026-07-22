@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
 import ApiClient from '../services/api-client'
 import GameCard from './GameCard';
 import { useLocation } from 'react-router-dom';
 import GameCardSkeleton from './GameCardSkeleton';
 import type { Platform } from './PlatformsList';
+import { useEffect, useState } from 'react';
 
 export interface Game {
     id: number;

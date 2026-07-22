@@ -6,10 +6,6 @@ export interface Platform {
     slug: string;
 }
 
-interface Props {
-    platforms: {platform: Platform}[];
-}
-
 interface IconProps {
   className?: string;
 }

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ApiClient from '../services/api-client'
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import GenresListSkeleton from './GenresListSkeleton';
 
 interface Genre {
@@ -39,6 +39,7 @@ const GenresList = () => {
     
   return (
     <>
+        {error && <p>Error: {error}</p>}
         {loading && <GenresListSkeleton />}
         {genresList.map((genre) => (
             <Link to={`/games?genres=${genre.name.toLocaleLowerCase()}`}  className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-indigo-50 text-indigo-900 font-medium transition-colors group" key={genre.id}>

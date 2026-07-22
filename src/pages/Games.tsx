@@ -1,4 +1,3 @@
-import React from 'react'
 import GameGrid from '../components/GameGrid'
 import GenresList from '../components/GenresList'
 
