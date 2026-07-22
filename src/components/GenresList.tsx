@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ApiClient from '../services/api-client'
+import { Link, useLocation } from 'react-router-dom';
+import GenresListSkeleton from './GenresListSkeleton';
 
 interface Genre {
     id: number;
@@ -37,15 +39,15 @@ const GenresList = () => {
     
   return (
     <>
+        {loading && <GenresListSkeleton />}
         {genresList.map((genre) => (
-            <a href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-indigo-50 text-indigo-900 font-medium transition-colors group" key={genre.id}>
-
+            <Link to={`/games?genres=${genre.name.toLocaleLowerCase()}`}  className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-indigo-50 text-indigo-900 font-medium transition-colors group" key={genre.id}>
                 <img className="w-10 h-10 rounded-lg object-cover ring-2 ring-indigo-200" src={genre.image_background} alt={genre.name} />
 
                 <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold truncate">{genre.name}</p>
                 </div>
-            </a>
+            </Link>
         ))}
     </>
   )
