@@ -4,7 +4,7 @@ const GameCardSkeleton = () => {
   return (
     <>
         {skeletons.map((skeleton) => (
-            <div key={skeleton} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8 flex">
+            <div key={skeleton} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8 flex" data-testid="game-card">
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col w-full transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
                     <img className="w-full h-56 object-cover bg-gray-50" src='test' />
                     
